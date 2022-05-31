@@ -1,0 +1,25 @@
+{% set cards = collections[item.region] | tagFilter(item.tags, 7) %}
+
+<div class="wrapper">
+  <h2 class="heading-2">Kategorier</h2>
+
+  <filter-container for="news-items">
+    <filter-group class="button-group" name="tag" type="single">
+      <button class="button button--outline button--md" value="all">Alla</button>
+      {%- for tag in item.tags -%}
+        <button class="button button--outline button--md" value="{{ tag }}">{{ tag }}</button>
+      {%- endfor -%}
+    </filter-group>
+  </filter-container>
+
+  <list-container class="grid" id="news-items" fetch-url="/.netlify/functions/news?region={{ item.region }}" total="100">
+    {%- for card in cards -%}
+      {% include "parts/card.njk" %}
+    {%- endfor -%}
+  </list-container>
+
+  <paging-container class="flex-center m-lg" for="news-items">
+    <button class="button button--outline button--md">Visa fler</button>
+  </paging-container>
+
+</div>

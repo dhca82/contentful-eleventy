@@ -1,0 +1,51 @@
+---
+title: Layout
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ global.siteName }} - {{ title }}</title>
+    <link rel="stylesheet" href="/main.css">
+
+
+  </head>
+  <body class="{{ pageType }}" lang="{{ locale }}">  
+
+    
+    <div class="page">
+      <header class="page__header">
+        <div>
+          <a href="/" class="logotype">
+            <span></span>
+            Logotype
+          </a>
+        </div>
+        {% include "navigation.njk" %}
+        <div>
+          <a href="/en/" class="button button--sm button--icon-lg">
+            <span class="circle-icon">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M10.001 18.333a8.333 8.333 0 1 0 0-16.666 8.333 8.333 0 0 0 0 16.666ZM1.668 10h16.667" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.001 1.667A12.75 12.75 0 0 1 13.335 10 12.75 12.75 0 0 1 10 18.333 12.75 12.75 0 0 1 6.668 10a12.75 12.75 0 0 1 3.333-8.333v0Z" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            English
+          </a>
+          <a href="/en/" class="button button--sm button--icon-lg">
+            <span class="circle-icon">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M9.167 15.833a6.667 6.667 0 1 0 0-13.333 6.667 6.667 0 0 0 0 13.333ZM17.5 17.5l-3.625-3.625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Sök
+          </a>
+          <a href="/stod-oss/" class="button button--sm page__header__cta">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M16.665 17.5v-1.667a3.333 3.333 0 0 0-3.333-3.333H6.665a3.333 3.333 0 0 0-3.333 3.333V17.5M10.001 9.167a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 6.667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Mina sidor
+          </a>
+        </div>
+      </header>
+      <main class="content">
+        {{ content | safe }}
+      </main>
+      <footer class="page__footer"></footer>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>

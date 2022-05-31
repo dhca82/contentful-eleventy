@@ -1,0 +1,13 @@
+.wrapper {
+  width: clamp(16rem, 95vw, 85rem);
+  /* width:1200px; */
+  margin:0 auto;
+}
+.wrapper--md {
+  width: 100%;
+  max-width: 66em;
+}
+.wrapper--narrow {
+  width: 100%;
+  max-width: 50em;
+}

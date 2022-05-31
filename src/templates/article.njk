@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+pagination:
+  data: article
+  size: 1
+  alias: currentPage
+  addAllPagesToCollections: true
+permalink: 
+  build: "{{ currentPage.url }}"
+  serverless: "{{ currentPage.previewPath }}"
+---
+
+<div class="content__header center">
+  <h1 class="heading-2">{{ currentPage.name }}</h1>
+</div>
+
+<div class="wrapper wrapper--narrow">
+  <div class="richtext">
+    {{ currentPage.body | safe }}
+  </div>
+</div>
+
+{# {%- for item in currentPage.blocks -%}
+  {{ item._editable | safe }}
+  <section>
+    {% include "../includes/blocks/" + item.type + ".njk" %}
+  </section>
+{%- endfor -%} #}

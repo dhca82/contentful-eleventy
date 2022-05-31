@@ -1,0 +1,69 @@
+---
+layout: layout.njk
+tags: region
+pagination:
+  data: regions
+  size: 1
+  alias: currentPage
+  addAllPagesToCollections: true
+permalink: 
+  build: "{{ currentPage.url }}"
+  serverless: "{{ currentPage.previewPath }}"
+---
+
+<div class="content__header viewport">
+  <div class="content__header__inner">
+    <div class="wrapper">
+      <h1 class="heading-1">{{ currentPage.title }}</h1>
+      <p class="text-xl">{{ currentPage.introduction }}
+    </div>
+    {% set children = collections.all | eleventyNavigation(currentPage.id) %}
+    {%- if children.length > 0 -%}
+    <peppr-carousel>
+      
+      {%- for entry in children %}
+        <peppr-carousel-item>
+          <a href="{{ entry.url | url }}" class="card">
+            <div class="card__main"></div>
+            <div class="card__footer">
+              <span class="text-lg semi-bold">{{ entry.title | safe }}</span>
+            </div>
+          </a>
+        </peppr-carousel-item>
+      {%- endfor %}
+    </peppr-carousel>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- for item in currentPage.blocks -%}
+  <section>
+    {% include "../includes/blocks/" + item.type + ".njk" %}
+  </section>
+{%- endfor -%}
+
+{# <div class="wrapper">
+  <div class="story">
+    <div class="story__content">
+      <div class="story__content__section">
+        <div class="feature">
+          <h2 class="heading-2 feature__title">
+              Lorem ipsum dolor sit amet
+            </h2>
+          <p class="text-xl feature__text">Många vilda kattdjur drabbas idag av förstörda och krympande livsmiljöer. Naturliga miljöer förstörs och trängs undan.</p>
+        </div>
+      </div>
+      <div class="story__content__section">
+        <div class="feature">
+          <h2 class="heading-2 feature__title">
+              Lorem ipsum dolor sit amet
+            </h2>
+          <p class="text-xl feature__text">Många vilda kattdjur drabbas idag av förstörda och krympande livsmiljöer. Naturliga miljöer förstörs och trängs undan.</p>
+        </div>
+      </div>
+    </div>
+    <div class="story__stage">
+      <div style="height:60vh; background:#f1f1f1; border-radius:15px;"></div>
+    </div>
+  </div>
+</div> #}

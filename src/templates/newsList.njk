@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+currentPage:
+  type: "newslist"
+  name: "Nyheter"
+pagination:
+  data: regions
+  size: 1
+  alias: region
+permalink: "/{{ region.slug }}/nyheter/"
+---
+
+<div class="content__header">
+  {{ region.slug }}
+</div>
+<div class="wrapper">
+
+  <div class="grid">
+    {%- for newsItem in collections[region.slug] -%}
+      <a href="{{ newsItem.url | url }}" class="card">
+        <div class="card__main"></div>
+        <div class="card__footer">
+          <span class="text-lg semi-bold">{{ newsItem.data.title | safe }}</span>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</div>

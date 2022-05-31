@@ -1,0 +1,111 @@
+.heading-1 {
+  font-size: var(--heading-1-size);
+  font-family: var(--font-display);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-weight);
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+}
+
+.heading-2 {
+  font-size: var(--heading-2-size);
+  font-family: var(--font-display);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-weight);
+  margin:calc(1.5 * var(--spacing)) 0;
+  display:block;
+}
+
+.heading-3 {
+  font-size: var(--heading-3-size);
+  font-family: var(--font-display);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-weight);
+  margin:calc(1.5 * var(--spacing)) 0;
+  letter-spacing: -0.01em;
+  display:block;
+}
+
+.heading-4 {
+  font-size: var(--heading-4-size);
+  font-family: var(--font-display);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-weight);
+  margin:calc(1.5 * var(--spacing)) 0;
+  display:block;
+}
+
+.heading-5 {
+  font-size: 22px;
+  font-family: var(--font-display);
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-weight);
+  margin:calc(1.5 * var(--spacing)) 0;
+  display:block;
+}
+
+.display-1 {
+  font-size: var(--display-1-size);
+  font-family: var(--font-display);
+  line-height: var(--display-line-height);
+  font-weight: var(--display-weight);
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+  /* letter-spacing: -.01em; */
+}
+
+.display-2 {
+  font-size: var(--display-2-size);
+  font-family: var(--font-display);
+  line-height: var(--display-line-height);
+  font-weight: var(--display-weight);
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+}
+
+.display-3 {
+  font-size: var(--display-3-size);
+  font-family: var(--font-display);
+  line-height: var(--display-line-height);
+  font-weight: var(--display-weight);
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+  /* font-size: clamp(2.25rem, 0.7392rem + 6.7147vw, 4.768rem); */
+}
+
+.display-4 {
+  font-size: var(--display-4-size);
+  font-family: var(--font-display);
+  line-height: var(--display-line-height);
+  font-weight: var(--display-weight);
+  letter-spacing: -0.01em;
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+}
+
+.display-5 {
+  font-size: var(--display-5-size);
+  font-family: var(--font-display);
+  line-height: var(--display-line-height);
+  font-weight: var(--display-weight);
+  letter-spacing: -0.01em;
+  margin:calc(1 * var(--spacing)) 0;
+  display:block;
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-md {
+  font-size: var(--text-md);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.semi-bold {
+  font-weight: 500;
+}

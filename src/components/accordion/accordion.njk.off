@@ -1,0 +1,23 @@
+---
+tags: components 
+title: Accordion 
+description: '
+  
+'
+---
+
+<a-accordion>
+  <a-accordion-item>
+    <h2 slot="title">Jag vill starta eget, hur kan Almi hjälpa mig?</h2>
+    <a-content>
+      <p>Lorem ipsum dolor sit amet</p>
+    </a-content>
+  </a-accordion-item>
+  <a-accordion-item>
+    <h2 slot="title">Lorem ipsum dolor</h2>
+    <a-content>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum</p>
+    </a-content>
+  </a-accordion-item>
+</a-accordion>

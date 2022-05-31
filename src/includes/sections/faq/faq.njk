@@ -1,0 +1,20 @@
+<div class="wrapper faq">
+  <h2 class="heading-2 faq__heading">{{ item.title }}</h2>
+
+  <filter-container for="faq-items" class="faq__filter">
+    <filter-group class="button-group" name="tag" type="single">
+      <button class="button button--outline button--sm" value="all">Utvalda</button>
+      {%- for tag in item.tags -%}
+        <button class="button button--outline button--sm" value="{{ tag }}">{{ tag }}</button>
+      {%- endfor -%}
+    </filter-group>
+  </filter-container>
+  
+  <accordion-container>
+    <list-container id="faq-items" update-url="false" fetch-url="/.netlify/functions/faq" total="100">
+    {%- for detail in item.items -%}
+      {% include "parts/detail.njk" %}
+    {%- endfor -%}
+    </list-container>
+  </accordion-container>
+</div>

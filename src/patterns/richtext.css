@@ -1,0 +1,5 @@
+.richtext {
+  font-size:var(--text-lg);
+  margin:0 0 2em;
+  max-width:48em;
+}

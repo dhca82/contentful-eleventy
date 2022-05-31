@@ -1,0 +1,24 @@
+html {
+  font-family: var(--font-base);
+  font-size: var(--font-base-size);
+}
+body {
+  padding: 0;
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+a {
+  color: var(--link-color, rgba(0,0,0,1));
+  text-decoration-color: var(--link-decoration-color, rgba(0,0,0,0.3));
+  text-decoration-thickness: 1px;
+  text-underline-offset: .4em;
+  font-weight: var(--link-weight, 400);
+}
+a:hover {
+  text-decoration-color: var(--link-decoration-color--hover, rgba(0,0,0,1));
+}
+
+p {
+  margin:0 0 1em;
+}

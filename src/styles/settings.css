@@ -1,0 +1,46 @@
+:root {
+  --site-max-width: 90vw;
+  --spacing: 1rem;
+
+  --font-base-size: 16px;
+  --font-base: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+  --line-height: 1.45;
+
+  --heading-1-size: 381.3%;
+  --heading-2-size: 306.3%;
+  --heading-3-size: 243.8%;
+  --heading-4-size: 193.8%;
+  --heading-5-size: 137.5%;
+
+  --heading-weight: 700;
+  --heading-line-height: 1.2;
+
+  --display-1-size: 743.8%;
+  --display-2-size: 596.1%;
+  --display-3-size: 437.5%;
+  --display-4-size: 381.3%;
+  --display-5-size: 225%;
+
+  --display-weight: 900;
+  --display-line-height: 1.1;
+
+  --text-sm: 87.5%;
+  --text-md: 100%;
+  --text-lg: 125%;
+  --text-xl: 156.3%;
+
+  --text-weight: 300;
+  --text-line-height: var(--line-height);
+
+ --shadow-md: {
+  0 0 1px rgba(66, 71, 76, 0.32),
+  0 4px 8px rgba(66, 71, 76, 0.06),
+  0 8px 48px rgba(238, 238, 238, 1)
+ }
+
+  --focus-outline: solid 3px var(--blue-500);
+}

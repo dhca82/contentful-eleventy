@@ -1,0 +1,60 @@
+{{ item.cards[0] | log }}
+
+<div class="wrapper wrapper--md" style="padding-top:6em">
+  <h2 class="heading-3">{{ item.title }}</h2>
+  <div class="card-grid">
+    <a href="{{ item.cards[0].link }}" class="feature-card">
+      <div class="feature-card__inner">
+        <span class="feature-card__tagline">
+          {{ item.cards[0].tagline }}
+        </span>
+        <span class="feature-card__title">
+          {{ item.cards[0].title }}
+        </span>
+      </div>
+    </a>
+    <a href="{{ item.cards[1].link }}" class="feature-card">
+      <div class="feature-card__inner">
+        <span class="feature-card__tagline">
+          {{ item.cards[1].tagline }}
+        </span>
+        <span class="feature-card__title">
+          {{ item.cards[1].title }}
+        </span>
+      </div>
+    </a>
+    <a href="{{ item.cards[2].link }}" class="feature-card feature-card--with-left-image">
+      <div class="feature-card__inner">
+
+        <span class="feature-card__tagline">
+          {{ item.cards[2].tagline }}
+        </span>
+        <span class="feature-card__title" style="width:80%;">
+          {{ item.cards[2].title }}
+        </span>
+        {%- if item.cards[2].description -%}
+          <p class="text-lg">
+            {{ item.cards[2].description }}
+          </p>
+        {%- endif -%}
+        <span class="button button--sm">{{ item.cards[2].linkText }}</span>
+      </div>
+      <div class="feature-card__image"></div>
+    </a>
+    <a href="{{ item.cards[3].link }}" class="feature-card feature-card--with-right-image">
+      <div class="feature-card__inner">
+        <span class="feature-card__title feature-card__title--sm">
+          {{ item.cards[3].title }}
+        </span>
+      </div>
+      <div class="feature-card__image"></div>
+    </a>
+    <a href="{{ item.cards[4].link }}" class="feature-card">
+      <div class="feature-card__inner">
+        <span class="feature-card__title feature-card__title--sm">
+          {{ item.cards[4].title }}
+        </span>
+      </div>
+    </a>
+  </div>
+</div>

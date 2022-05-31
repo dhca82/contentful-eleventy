@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+tags: news
+pagination:
+  data: news
+  size: 1
+  alias: currentPage
+  addAllPagesToCollections: true
+permalink: 
+  build: "{{ currentPage.url }}"
+  serverless: "{{ currentPage.previewPath }}"
+---
+
+<div class="content__header">
+  <div class="wrapper wrapper--narrow center">
+    <h1 class="heading-2">{{ currentPage.name }}</h1>
+  </div>
+</div>
+
+<div class="wrapper wrapper--narrow">
+  <div class="richtext">
+    {{ currentPage.body | safe }}
+  </div>
+</div>

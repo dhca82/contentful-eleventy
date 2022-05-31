@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+pagination:
+  data: start
+  size: 1
+  alias: currentPage
+permalink: 
+  build: "/"
+  serverless: "/__preview/"
+---
+
+{%- for item in currentPage.blocks -%}
+  {%- if item.type !== undefined -%}
+  <section>
+    {% include "../includes/sections/" + item.type + "/" + item.type + ".njk" %}
+  </section>
+  {%- endif -%}
+{%- endfor -%}  

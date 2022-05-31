@@ -1,0 +1,23 @@
+.flex-center {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-md {
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.m-lg {
+  margin-top:3em;
+  margin-bottom:3em;
+}
+
+
+[aria-busy="true"] .on-busy {
+  border-radius: 1em;
+  background: #f1f1f1;
+  color: transparent;
+  box-decoration-break: clone;
+}

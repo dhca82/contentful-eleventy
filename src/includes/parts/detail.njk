@@ -1,0 +1,10 @@
+<accordion-item>
+  <h2 class="semi-bold heading-5" slot="title">
+    <span class="on-busy">{{ detail.summary }}</span>
+  </h2>
+  <rich-text>
+    <div class="richtext">
+      {{ detail.text | safe }}
+    </div>
+  </rich-text>
+</accordion-item>

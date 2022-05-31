@@ -1,0 +1,12 @@
+.faq {
+  padding:8em 0;
+}
+.faq__heading {
+  text-align: center;
+  margin:0 0 .2em;
+}
+.faq__filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom:2em;
+}
