@@ -1,3 +1,6 @@
+[functions]
+included_files = [ "src/includes/parts/*.njk" ]
+
 [[redirects]]
 from = "/__preview/Y4i1uziS0NJCTp1Imibls"
 to = "/.netlify/functions/serverless"

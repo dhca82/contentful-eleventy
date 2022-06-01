@@ -63,12 +63,12 @@
   width:32%;
   position: absolute;
 
-  mask-image: url(./mask.svg);
+  mask-image: url(./assets/mask.svg);
   mask-size: auto calc(100vh + 490px);
   mask-repeat: no-repeat;
   mask-position: left center;
 
-  -webkit-mask-image: url(./mask.svg);
+  -webkit-mask-image: url(./assets/mask.svg);
   -webkit-mask-size: auto calc(100vh + 490px);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: left center;
