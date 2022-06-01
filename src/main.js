@@ -1,6 +1,5 @@
 import { listen } from 'quicklink'
 
-
 import './components/modal/modal.js'
 
 import './components/carousel/carousel.js'
