@@ -20,7 +20,8 @@ module.exports = (data) => {
           link: urlResolver(entry.fields.link),
           linkText: entry.fields.linkText,
           type: 'hero',
-          id: entry.sys.id
+          id: entry.sys.id,
+          image: entry.fields.image
         }
       }
       case 'newsSection': {

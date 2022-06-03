@@ -3,8 +3,9 @@ import { LitElement, html, css } from 'lit'
 class Picture extends LitElement {
   static styles = css`
     :host {
-      width:100%;
-      height:100%;
+      position:absolute;
+      inset:0;
+    
     }
     img {
       width: 100%;
@@ -22,14 +23,15 @@ class Picture extends LitElement {
     
   }
   connectedCallback() {
+    
     super.connectedCallback();
+    console.log('width', this.offsetWidth)
     if(this.width = 'auto')
       this.width = this.offsetWidth
     if(this.height = 'auto')
       this.height = this.offsetHeight
   }
   render() {
-    console.log(2)
     return html`
       <picture>
         <source

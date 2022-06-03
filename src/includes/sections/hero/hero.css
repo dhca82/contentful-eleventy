@@ -55,7 +55,7 @@
 .hero p {
   width:90%;
 }
-.hero__image {
+.hero__mask {
   background:rgba(0,0,0,0.075);
   top:0;
   right:0;
@@ -82,3 +82,12 @@
   height:100%;
   transform: scaleY(2) rotate(45deg);
 } */
+
+.hero__image {
+  background:purple;
+  /* height:calc(100vh - 95px); */
+  height:100vh;
+  width:100%;
+  position: relative;
+  /* margin-top:95px; */
+}
