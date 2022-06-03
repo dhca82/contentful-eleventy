@@ -1,4 +1,4 @@
-{{ item.cards[0] | log }}
+{{ item.cards[2] | log }}
 
 <div class="wrapper wrapper--md" style="padding-top:6em">
   <h2 class="heading-3">{{ item.title }}</h2>
@@ -39,7 +39,13 @@
         {%- endif -%}
         <span class="button button--sm">{{ item.cards[2].linkText }}</span>
       </div>
-      <div class="feature-card__image"></div>
+      <div class="feature-card__image">
+
+        <picture-container src="{{ item.cards[2].image.src }}" width="auto" height="auto" alt="">
+          Bild
+        </picture-container>
+
+      </div>
     </a>
     <a href="{{ item.cards[3].link }}" class="feature-card feature-card--with-right-image">
       <div class="feature-card__inner">
@@ -47,7 +53,11 @@
           {{ item.cards[3].title }}
         </span>
       </div>
-      <div class="feature-card__image"></div>
+      <div class="feature-card__image">
+        <picture-container src="{{ item.cards[3].image.src }}" width="auto" height="auto" alt="">
+          Bild
+        </picture-container>
+      </div>
     </a>
     <a href="{{ item.cards[4].link }}" class="feature-card">
       <div class="feature-card__inner">

@@ -9,6 +9,7 @@ import './components/list/list.js'
 import './components/paging/paging.js'
 import './components/accordion/accordion.js'
 import './components/toggle-icon/toggleIcon.js'
+import './components/picture/picture.js'
 
 import './patterns/feature.css'
 import './patterns/richtext.css'

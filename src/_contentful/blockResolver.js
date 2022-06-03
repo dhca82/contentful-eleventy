@@ -42,7 +42,8 @@ module.exports = (data) => {
               tagline: card.fields.tagline,
               description: card.fields.description,
               link: urlResolver(card.fields.link),
-              linkText: card.fields.linkText
+              linkText: card.fields.linkText,
+              image: card.fields.image
             }
           })
         }

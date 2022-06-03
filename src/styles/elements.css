@@ -22,3 +22,8 @@ a:hover {
 p {
   margin:0 0 1em;
 }
+
+img {
+  filter:grayscale(); 
+  opacity:.5;
+}
