@@ -1,8 +1,10 @@
 const { EleventyServerlessBundlerPlugin } = require('@11ty/eleventy')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
-const StoryblokClient = require('storyblok-js-client')
+const client = require('./src/_contentful/client.js')
 const tagFilter = require('./src/_filters/tagFilter')
 const paginationFilter = require('./src/_filters/paginationFilter')
+const localeFilter = require('./src/_filters/localeFilter')
+const switchLanguage = require('./src/_filters/switchLanguage')
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -19,6 +21,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('tagFilter', tagFilter)
   eleventyConfig.addFilter('paginationFilter', paginationFilter)
+  eleventyConfig.addFilter('localeFilter', localeFilter)
+  eleventyConfig.addFilter('switchLanguage', switchLanguage)
 
   const regions = [
     { id: '4JfA9RZrLouaiCQxej03mU', slug: 'stockholm' },
@@ -41,16 +45,31 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addGlobalData('global', async () => {
-    // const client = new StoryblokClient({
-    //   accessToken: process.env.CMS_ACCESS_TOKEN,
-    // });
-    // const startPage = await client.get(
-    //   `cdn/stories/${process.env.STARTPAGE_ID}`
-    // );
+    const locales = await client.getLocales()
     return {
       //siteName: startPage.data.story.content.site_name,
+      allLocales: locales.items.map(locale => locale.code),
       siteRootId: process.env.STARTPAGE_ID,
       lastBuilt: Date.now(),
+    }
+  })
+
+  eleventyConfig.addGlobalData('localizedStrings', async () => {
+    return {
+      'sv-SE': {
+        startUrl: '/',
+        more: 'Mer',
+        search: 'Sök',
+        language: 'English',
+        mypages: 'Mina sidor'
+      },
+      'en': {
+        startUrl: '/en/',
+        more: 'More',
+        search: 'Search',
+        language: 'Svenska',
+        mypages: 'Log in'
+      }
     }
   })
 

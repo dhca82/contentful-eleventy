@@ -10,6 +10,7 @@ import './components/paging/paging.js'
 import './components/accordion/accordion.js'
 import './components/toggle-icon/toggleIcon.js'
 import './components/picture/picture.js'
+import './components/mobileMenu/mobileMenu.js'
 
 import './patterns/feature.css'
 import './patterns/richtext.css'

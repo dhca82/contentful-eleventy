@@ -1,5 +1,8 @@
-module.exports = (entry, url = '') => {
-  return resolve(entry, url)
+module.exports = (entry, locale = 'sv-SE', url = '') => {
+  if(locale === 'sv-SE') {
+    return resolve(entry, url)
+  }
+  return '/' + locale + resolve(entry, url)
 }
 
 resolve = (entry, url = '') => {

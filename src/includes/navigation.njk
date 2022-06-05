@@ -1,4 +1,4 @@
-{% set pages = collections.all | eleventyNavigation(global.siteRootId) %}
+{% set pages = collections.all | localeFilter(currentPage.locale) | eleventyNavigation(global.siteRootId) %}
 
 <nav class="navigation" aria-label="Huvudmeny">
   <ul class="navigation__list">
@@ -10,7 +10,9 @@
     <li class="navigation__list__item">
 
       <button aria-controls="navigation-modal">
-        Mer
+
+        {{ localizedStrings[currentPage.locale].more }}
+
         <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.125 11h24.75a1.375 1.375 0 0 0 0-2.75H4.125a1.375 1.375 0 0 0 0 2.75Zm24.75 11H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Zm0-6.875H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Z" /></svg>
       </button>
       <peppr-modal class="navigation__modal" id="navigation-modal">

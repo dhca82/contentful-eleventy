@@ -1,49 +1,67 @@
 .navigation {
-  height: 95%;
-  font-size: 1.313rem;
-  display: flex;
-  align-items: center;
-  display: none;
-}
-body.start .navigation {
-  position: relative;
-  top:6.5em;
-  display: block;
-}
-.navigation__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 1.5em;
-}
-.navigation__list__item a,
-.navigation__list__item button {
-  font-weight: 500;
-  display: block;
-  padding: 0.75em 0.5em;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.navigation__list__item button {
-  font-size: inherit;
-  font-family: inherit;
-  appearance: none;
-  border: none;
-  background: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  cursor: pointer;
-}
-.navigation__list__item button svg {
-  fill: rgba(0, 0, 0, 0.8);
+  display:none;
 }
 
-.navigation__modal::part(dialog) {
-  align-self: flex-start;
-  margin-top: 5.938rem;
-  width: calc(100vw - 120px);
+@media (min-width: 768px) {
+  .navigation {
+    height: 95%;
+    font-size: 1.313rem;
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+  body.start .navigation {
+    position: relative;
+    top:6.5em;
+    display: block;
+  }
+  .navigation__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5em;
+  }
+  .navigation__list__item a,
+  .navigation__list__item button {
+    font-weight: 500;
+    display: block;
+    padding: 0.75em 0.5em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .navigation__list__item button {
+    font-size: inherit;
+    font-family: inherit;
+    appearance: none;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+  }
+  .navigation__list__item button svg {
+    fill: rgba(0, 0, 0, 0.8);
+  }
+  
+  .navigation__modal::part(dialog) {
+    align-self: flex-start;
+    margin-top: 5.938rem;
+    width: calc(100vw - 50px);
+    border-radius:6px;
+    box-shadow:  0 0 1px rgba(66, 71, 76, 0.32),
+    0 4px 8px rgba(66, 71, 76, 0.06),
+    0 8px 48px rgba(238, 238, 238, .05);
+    padding:25px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
 }

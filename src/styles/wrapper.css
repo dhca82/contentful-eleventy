@@ -1,7 +1,9 @@
 .wrapper {
-  width: clamp(16rem, 95vw, 85rem);
+  width: auto;
+  padding:0 20px;
   /* width:1200px; */
   margin:0 auto;
+  box-sizing: border-box;
 }
 .wrapper--md {
   width: 100%;
@@ -10,4 +12,10 @@
 .wrapper--narrow {
   width: 100%;
   max-width: 50em;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: clamp(16rem, 95vw, 85rem);
+  }
 }

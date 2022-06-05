@@ -6,10 +6,10 @@
   text-decoration: none;
   border: 0;
   height: 2.955em;
-  font-size: 1.375em;
+  font-size: var(--button-text-lg);
   font-weight: 600;
   padding: 0 2em;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: calc(2.955em / 2);

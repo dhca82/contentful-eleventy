@@ -112,3 +112,24 @@
   font-size:32px;
   text-align:center;
 }
+
+
+@media (max-width: 767px) {
+  .grid {
+    display:none !important;
+  }
+  .card-grid {
+    display:none !important;
+  }
+  filter-container,
+  accordion-container {
+    display:none !important;
+  }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

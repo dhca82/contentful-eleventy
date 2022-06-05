@@ -21,7 +21,7 @@
 
   --display-1-size: 743.8%;
   --display-2-size: 596.1%;
-  --display-3-size: 437.5%;
+  --display-3-size: 34px;
   --display-4-size: 381.3%;
   --display-5-size: 225%;
 
@@ -31,10 +31,12 @@
   --text-sm: 87.5%;
   --text-md: 100%;
   --text-lg: 125%;
-  --text-xl: 156.3%;
+  --text-xl: 18px;
 
   --text-weight: 300;
   --text-line-height: var(--line-height);
+
+  --button-text-lg: 112.5%;
 
  --shadow-md: {
   0 0 1px rgba(66, 71, 76, 0.32),
@@ -43,4 +45,39 @@
  }
 
   --focus-outline: solid 3px var(--blue-500);
+}
+
+
+@media (min-width: 768px) {
+
+  :root {
+    --spacing: 1rem;
+    
+    --heading-1-size: 381.3%;
+    --heading-2-size: 306.3%;
+    --heading-3-size: 243.8%;
+    --heading-4-size: 193.8%;
+    --heading-5-size: 137.5%;
+  
+    --display-1-size: 743.8%;
+    --display-2-size: 596.1%;
+    --display-3-size: 437.5%;
+    --display-4-size: 381.3%;
+    --display-5-size: 225%;
+  
+    --text-sm: 87.5%;
+    --text-md: 100%;
+    --text-lg: 125%;
+    --text-xl: 156.3%;
+
+    --button-text-lg: 137.5%;
+    
+  }
+
+}
+@media (min-width: 992px) {	
+
+}
+@media (min-width: 1200px) {
+
 }

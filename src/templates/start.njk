@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: currentPage
 permalink: 
-  build: "/"
+  build: "{{ currentPage.url }}"
   serverless: "/__preview/"
 ---
 

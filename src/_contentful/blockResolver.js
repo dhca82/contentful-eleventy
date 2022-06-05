@@ -2,7 +2,7 @@ const urlResolver = require('./urlResolver');
 
 const documentToHtmlString = require('@contentful/rich-text-html-renderer').documentToHtmlString;
 
-module.exports = (data) => {
+module.exports = (data, locale = 'sv-SE') => {
   if(!data) return;
   return data.map(entry => {
     switch(entry.sys.contentType.sys.id) {
@@ -17,7 +17,7 @@ module.exports = (data) => {
         return {
           title: entry.fields.title,
           text: entry.fields.text,
-          link: urlResolver(entry.fields.link),
+          link: urlResolver(entry.fields.link, locale),
           linkText: entry.fields.linkText,
           type: 'hero',
           id: entry.sys.id,
@@ -42,7 +42,7 @@ module.exports = (data) => {
               title: card.fields.title,
               tagline: card.fields.tagline,
               description: card.fields.description,
-              link: urlResolver(card.fields.link),
+              link: urlResolver(card.fields.link, locale),
               linkText: card.fields.linkText,
               image: card.fields.image
             }

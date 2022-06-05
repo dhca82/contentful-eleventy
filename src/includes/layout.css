@@ -1,28 +1,4 @@
-.page {}
-.page__header {
-  position: absolute;
-  top:0;
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-  background: var(--header-bg, rgba(0,0,0,0.05));
-  height: 5.938rem;
-  z-index:1;
-  padding:0 calc(var(--spacing) * 3);
-  box-sizing: border-box;
-}
-.page__header > div {
-  display: flex;
-  align-items: center;
-  width:100%;
-  position: relative;
-}
-.page__header > div:last-child {
-  justify-content: flex-end;
-}
-.page__header__cta {
-  margin-left:1em;
-}
+
 
 .page__footer {
   min-height:600px;
@@ -36,6 +12,7 @@
   font-size:24px;
   font-weight: 700;
   gap:.5em;
+  z-index: 1;
 }
 
 .logotype span {
@@ -45,7 +22,6 @@
   height:54px;
   width:54px;
   border-radius:12px;
-  background:#fff;
   box-shadow:var(--shadow-md);
 }
 .logotype span:after {
@@ -65,4 +41,69 @@
   border-radius:3px;
   background:rgba(0,0,0,0.15);
   transform: translateX(4px) rotate(45deg);
+}
+
+@media (max-width: 767px) {
+  .page__header {
+    display:none;
+  }
+  .page__header-sm .button--icon-lg {
+    padding:0;
+  }
+  .page__header-sm {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-bg, rgba(0,0,0,0.05));
+    height:75px;
+    padding:0 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+  }
+  .page__header-sm > div {
+    display:flex;
+    align-items: center;
+    gap:1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .logotype span { 
+    background: #fff;
+  }
+  .page__header-sm {
+    display:none;
+  }
+  .page__header {
+    position: absolute;
+    top:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    background: var(--header-bg, rgba(0,0,0,0.05));
+    height: 5.938rem;
+    z-index:1;
+    padding:0 calc(var(--spacing) * 3);
+    box-sizing: border-box;
+  }
+  .page__header > div {
+    display: flex;
+    align-items: center;
+    width:100%;
+    position: relative;
+  }
+  .page__header > div:last-child {
+    justify-content: flex-end;
+  }
+  .page__header__cta {
+    margin-left:1em;
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+  
 }
