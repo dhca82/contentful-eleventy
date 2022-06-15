@@ -50,12 +50,15 @@ title: Layout
             </span>
             {{ localizedStrings[currentPage.locale].language }}
           </a>
-          <a href="/sok/" class="button button--sm button--icon-lg">
+          <a href="/sok/" class="button button--sm button--icon-lg" aria-controls="search-container">
             <span class="circle-icon">
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M9.167 15.833a6.667 6.667 0 1 0 0-13.333 6.667 6.667 0 0 0 0 13.333ZM17.5 17.5l-3.625-3.625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             {{ localizedStrings[currentPage.locale].search }}
           </a>
+          <modal-container id="search-container" class="search">
+            {% include "search.njk" %}
+          </modal-container>
           <a href="/stod-oss/" class="button button--sm page__header__cta">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M16.665 17.5v-1.667a3.333 3.333 0 0 0-3.333-3.333H6.665a3.333 3.333 0 0 0-3.333 3.333V17.5M10.001 9.167a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 6.667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             {{ localizedStrings[currentPage.locale].mypages }}

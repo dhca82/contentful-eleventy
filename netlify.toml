@@ -2,6 +2,13 @@
 included_files = [ "src/includes/parts/*.njk" ]
 
 [[redirects]]
+from = "/__preview/vtGeFH5Go1RA1nRLxD5rA"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
 from = "/__preview/Y4i1uziS0NJCTp1Imibls"
 to = "/.netlify/functions/serverless"
 status = 200
@@ -10,6 +17,13 @@ _generated_by_eleventy_serverless = "serverless"
 
 [[redirects]]
 from = "/__preview/GtFd3Wu6Jyan97EKDD0EW"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/7yF9MubrhXWP12O2JsXwMS"
 to = "/.netlify/functions/serverless"
 status = 200
 force = true
@@ -58,6 +72,13 @@ force = true
 _generated_by_eleventy_serverless = "serverless"
 
 [[redirects]]
+from = "/__preview/6rTHCjrAwOLzlDOTXIl9Pb"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
 from = "/__preview/6fS80m6jvXbj88wXJU1aa7"
 to = "/.netlify/functions/serverless"
 status = 200
@@ -65,7 +86,49 @@ force = true
 _generated_by_eleventy_serverless = "serverless"
 
 [[redirects]]
+from = "/__preview/60poHajYjttIU7wSxixco4"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/5ybNBrtVuiT6iOgCqg9BTN"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/5pCWegx87YVJ711fzSzOXA"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/5SuvDkYNE1tPd6dKGwl8F1"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
 from = "/__preview/5QSNtO6MP2c6sbLgdndi5w"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/55AZTNW4yVtIEOtRVPMAbO"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/54wSyM2aQtPp4nf6vh5sXB"
 to = "/.netlify/functions/serverless"
 status = 200
 force = true
@@ -129,6 +192,13 @@ _generated_by_eleventy_serverless = "serverless"
 
 [[redirects]]
 from = "/__preview/2tV8tHa3pHBiMDiNyucOwC"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/__preview/2diNgbXoiiHX2bikidZ5r9"
 to = "/.netlify/functions/serverless"
 status = 200
 force = true

@@ -50,12 +50,12 @@
   .navigation__modal::part(dialog) {
     align-self: flex-start;
     margin-top: 5.938rem;
-    width: calc(100vw - 50px);
+    width: calc(100vw - 40px);
     border-radius:6px;
     box-shadow:  0 0 1px rgba(66, 71, 76, 0.32),
     0 4px 8px rgba(66, 71, 76, 0.06),
     0 8px 48px rgba(238, 238, 238, .05);
-    padding:25px;
+    padding:80px;
     box-sizing: border-box;
   }
 }

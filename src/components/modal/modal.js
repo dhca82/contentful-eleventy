@@ -6,7 +6,7 @@ class Modal extends LitElement {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: fixed;
+      position: absolute;
       inset: 0;
       z-index: 99;
     }
@@ -14,7 +14,7 @@ class Modal extends LitElement {
       content: '';
       display: block;
       inset: 0;
-      position: absolute;
+      position: fixed;
       background: rgba(0, 0, 0, 0.5);
       opacity: 1;
       transition: opacity 500ms ease;
@@ -45,8 +45,16 @@ class Modal extends LitElement {
     }
     button {
       position: absolute;
-      right:2rem;
-      top:2rem;
+      right: 25px;
+      top: 25px;
+      appearance: none;
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.3);
     }
   `
   static properties = {
@@ -58,9 +66,7 @@ class Modal extends LitElement {
     this.handleTriggerClick = this.handleTriggerClick.bind(this)
     this.closeDialog = this.closeDialog.bind(this)
 
-    this._trigger = document.querySelector(
-      `[aria-controls="${this.getAttribute('id')}"]`
-    )
+    this._trigger = document.querySelector(`[aria-controls="${this.getAttribute('id')}"]`)
     this.initTrigger()
     document.body.prepend(this)
   }
@@ -83,8 +89,10 @@ class Modal extends LitElement {
     document.querySelector('.page').setAttribute('inert', '')
     setTimeout(() => {
       this.classList.remove('opening')
+      this.querySelector('input')?.focus()
       document.addEventListener('click', this.closeDialog)
       window.addEventListener('keyup', this.handleEscPress)
+      document.dispatchEvent(new CustomEvent('modal-opened'))
     }, 50)
   }
   closed() {
@@ -103,7 +111,8 @@ class Modal extends LitElement {
       this.open = false
     }, 500)
   }
-  handleTriggerClick() {
+  handleTriggerClick(e) {
+    e.preventDefault()
     this.open ? (this.open = false) : (this.open = true)
   }
   handleEscPress(e) {
@@ -113,18 +122,16 @@ class Modal extends LitElement {
   }
   render() {
     if (!this.open) return
+    
     return html`
       <dialog part="dialog" open @click="${(e) => e.stopPropagation()}">
-        <button
-          @click="${this.closeDialog}"
-          aria-label="Stäng (esc)"
-          part="close-button"
-        >
-          x
+        <button @click="${this.closeDialog}" aria-label="Stäng (esc)" part="close-button">
+          Esc
+          <cross-icon circle></cross-icon>
         </button>
         <slot></slot>
       </dialog>
     `
   }
 }
-customElements.define('peppr-modal', Modal)
+customElements.define('modal-container', Modal)

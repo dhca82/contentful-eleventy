@@ -11,6 +11,10 @@ import './components/accordion/accordion.js'
 import './components/toggle-icon/toggleIcon.js'
 import './components/picture/picture.js'
 import './components/mobileMenu/mobileMenu.js'
+import './components/tabs/tabs.js'
+
+import './icons/search.js'
+import './icons/cross.js'
 
 import './patterns/feature.css'
 import './patterns/richtext.css'
@@ -27,6 +31,7 @@ import './styles/util.css'
 
 import './includes/layout.css'
 import './includes/navigation.css'
+import './includes/search.css'
 import './includes/sections/hero/hero.css'
 import './includes/sections/faq/faq.css'
 

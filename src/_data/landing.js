@@ -24,17 +24,14 @@ function mapResponseToViewModel(response, locale) {
     if(!entry.fields.slug) return null
     return {
       locale: locale,
-      localizedUrls: [
-        { 'sv-SE' : '/' },
-        { 'en' : '/en/' }
-      ],
       name: entry.fields.name,
       title: entry.fields.title,
       introduction: entry.fields.introduction,
+      tags: entry.metadata.tags.map(tag => tag.sys.id),
       slug: entry.fields.slug,
       url: urlResolver(entry, locale),
       id: entry.sys.id,
-      parentId: entry.fields.parent.sys.id,
+      parentId: entry.fields.parent?.sys.id,
       previewPath: `/__preview/${entry.sys.id}`,
       blocks: blockResolver(entry.fields.sections, locale),
       type: 'landing',

@@ -15,10 +15,10 @@ module.exports = async function (configData) {
       slug: entry.fields.slug,
       url: urlResolver(entry),
       id: entry.sys.id,
+      tags: entry.metadata.tags.map(tag => tag.sys.id),
       parentId: entry.fields.parent?.sys.id,
       previewPath: `/__preview/${entry.sys.id}`,
       body: documentToHtmlString(entry.fields.body),
-      tags: ['apa']
     }
   })
 

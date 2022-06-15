@@ -80,7 +80,7 @@
     -webkit-mask-position: left center;
   }
   .hero__image {
-    background: purple;
+    background: #e1e1e1;
     display: block;
     /* height:calc(100vh - 95px); */
     height: 100vh;

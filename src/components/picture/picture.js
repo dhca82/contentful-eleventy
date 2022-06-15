@@ -11,6 +11,7 @@ class Picture extends LitElement {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter:grayscale();
     }
   `
   static properties = {
@@ -23,9 +24,7 @@ class Picture extends LitElement {
     
   }
   connectedCallback() {
-    
     super.connectedCallback();
-    console.log('width', this.offsetWidth)
     if(this.width = 'auto')
       this.width = this.offsetWidth
     if(this.height = 'auto')

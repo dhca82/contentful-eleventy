@@ -12,6 +12,11 @@ class Carousel extends LitElement {
       width: 100vw;
       scroll-snap-type: x mandatory;
     }
+    .outer::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0;
+      height: 0;
+    }
     .inner {
       display: flex;
       justify-content: flex-start;

@@ -63,9 +63,10 @@ class AccordionItem extends LitElement {
           @click="${() => (this.open = !this.open)}"
           aria-expanded="${this.open ? 'true' : 'false'}"
           aria-controls="${this._regionId}"
+          part="button"
         >
           <slot name="title"></slot>
-          <a-toggle-icon
+          <a-toggle-icon part="icon"
             open="${ifDefined(this.open ? '' : undefined)}"
           ></a-toggle-icon>
         </button>

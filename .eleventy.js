@@ -39,6 +39,14 @@ module.exports = function (eleventyConfig) {
     })
   })
 
+  eleventyConfig.addCollection('guides', function (collectionApi) {
+    const guides = collectionApi
+      .getAll()
+      .filter((item) => item.data.currentPage.tags?.includes('guides'))
+    return guides
+  })
+
+
   eleventyConfig.setBrowserSyncConfig({
     //Reload browser when js/css bundles are built
     files: ['./dist/main.js', './dist/main.css'],

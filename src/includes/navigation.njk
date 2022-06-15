@@ -13,11 +13,38 @@
 
         {{ localizedStrings[currentPage.locale].more }}
 
-        <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.125 11h24.75a1.375 1.375 0 0 0 0-2.75H4.125a1.375 1.375 0 0 0 0 2.75Zm24.75 11H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Zm0-6.875H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Z" /></svg>
+        <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.125 11h24.75a1.375 1.375 0 0 0 0-2.75H4.125a1.375 1.375 0 0 0 0 2.75Zm24.75 11H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Zm0-6.875H4.125a1.375 1.375 0 0 0 0 2.75h24.75a1.375 1.375 0 0 0 0-2.75Z"/></svg>
       </button>
-      <peppr-modal class="navigation__modal" id="navigation-modal">
-          Lorem
-      </peppr-modal>
+      <modal-container class="navigation__modal" id="navigation-modal">
+
+        <tabs-container>
+          <tab-panel aria-label="Tjänster">
+            <h2>Lorem</h2>
+            <div class="m-lg" slot="content"></div>
+          </tab-panel>
+          <tab-panel aria-label="Guider & vägledning">
+            <h2>Ipsum</h2>
+            <div class="grid m-xl" slot="content">
+              {%- for guide in collections.guides -%}
+                <a href="{{guide.data.currentPage.url}}" class="card">
+                  <div class="card__main">
+                    <div class="card__main__inner">
+                      <span class="card__main__title heading-4">{{guide.data.currentPage.name}}</span>
+                    </div>
+                  </div>
+                </a>
+              {%- endfor -%}
+            </div>
+          </tab-panel>
+          <tab-panel aria-label="Kunskap & inspiration">
+            <h2>Ipsum</h2>
+            <div class="m-lg richtext" slot="content">
+              <p>Ipsum dolor lorem</p>
+            </div>
+          </tab-panel>
+        </tabs-container>
+
+      </modal-container>
 
     </li>
   </ul>
