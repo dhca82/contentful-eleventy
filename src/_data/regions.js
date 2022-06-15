@@ -10,6 +10,7 @@ module.exports = async function (configData) {
 
   const pages = Array.from(response.items).map((entry) => {
     return {
+      locale: 'sv-SE',
       name: entry.fields.name,
       title: entry.fields.title,
       introduction: entry.fields.introduction,

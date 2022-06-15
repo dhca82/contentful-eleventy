@@ -11,6 +11,7 @@ module.exports = async function (configData) {
 
   const pages = Array.from(response.items).map((entry) => {
     return {
+      locale: 'sv-SE',
       name: entry.fields.title,
       slug: entry.fields.slug,
       url: `/${entry.fields.region?.fields.slug}/nyheter/${entry.fields.slug}/`,
